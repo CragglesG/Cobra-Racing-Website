@@ -14,6 +14,11 @@
     <meta name="twitter:title" content="Cobra Racing - F1 in Schools Team">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
+	<script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" 
+            integrity= 
+"sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" 
+            crossorigin="anonymous"></script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -142,7 +147,71 @@
     <link rel="stylesheet" href="assets/css/website.css">
 </head>
 
-<body><svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+<body>
+	<form id="static-pass-form"> 
+        <div class="mb-3"> 
+            <label for="password" 
+                   class="form-label">Password</label> 
+            <input id="static-pass"
+                   type="password" 
+                   class="form-control"
+                   id="Password"
+                   aria-describedby="PasswordHelp"> 
+            <div id="PasswordHelp" 
+                 class="form-text"> 
+                 You need Password to access the page. 
+                </div> 
+        </div> 
+        <input type="submit" 
+               class="btn btn-primary"
+               value="Access" /> 
+    </form> 
+    <script> 
+        var keySize = 256; 
+        var iterations = 1000; 
+  
+        function access(protectedText, pass) { 
+            var salt = CryptoJS.enc.Hex.parse(protectedText.substr(0, 32)); 
+            var iv = CryptoJS.enc.Hex.parse(protectedText.substr(32, 32)) 
+            var protected = protectedText.substring(64); 
+  
+            var key = CryptoJS.PBKDF2(pass, salt, { 
+                keySize: keySize / 32, 
+                iterations: iterations 
+            }); 
+  
+            var decrypted = CryptoJS.AES.decrypt(protected, key, { 
+                iv: iv, 
+                padding: CryptoJS.pad.Pkcs7, 
+                mode: CryptoJS.mode.CBC 
+            }).toString(CryptoJS.enc.Utf8); 
+            return decrypted; 
+        } 
+  
+        document.getElementById( 
+            'static-pass-form').addEventListener('submit', function(e) { 
+            e.preventDefault(); 
+  
+            var passphrase = document.getElementById('static-pass').value, 
+                protectedText = "C0bra_Rac1ng!", 
+                protectedHMAC = protectedText.substring(0, 64), 
+                protectedHTML = protectedText.substring(64), 
+                decryptedHMAC = CryptoJS.HmacSHA256( 
+                    protectedHTML, CryptoJS.SHA256( 
+                        passphrase).toString()).toString(); 
+  
+            if (decryptedHMAC !== protectedHMAC) { 
+                alert('Bad passphrase!'); 
+                return; 
+            } 
+  
+            var plainHTML = access(protectedHTML, passphrase); 
+  
+            document.write(plainHTML); 
+            document.close(); 
+        }); 
+    </script>
+	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
       </symbol>
