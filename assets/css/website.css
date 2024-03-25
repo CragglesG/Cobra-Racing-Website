@@ -1,11 +1,9 @@
 @keyframes fadeIn {
   0% {
     opacity: 0.05;
-    /*transform: translateX(-100%);*/
   }
   100% {
     opacity: 1;
-    /*transform: translateX(0);*/
   }
 }
 
@@ -16,6 +14,12 @@
   margin-left: calc(50% - 37.5vw);
 }
 
+[data-bs-theme=dark] {
+  #nav.scrolled {
+    background-color: darkred;
+  }
+}
+
 #nav {
   will-change: margin;
   border-radius: 0;
@@ -23,30 +27,31 @@
   width: 100%;
   transition: top 0.5s ease, border-radius 0.5s ease, margin-left 0.5s ease;
   margin-left: calc(50% - 49.45vw);
+  background-color: #212529;
 }
 
 .pill-selector {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Adjust the gap between options */
+  gap: 10px;
+}
+
+.pill-option {
+  padding: 0.7rem 1.4rem; 
+  background-color: goldenrod; 
+  color: white; 
+  border-radius: 5rem; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  visibility: hidden;
 }
  
-.pill-option {
-  padding: 10px 20px; /* Adjust padding as needed */
-  background-color: goldenrod; /* Background color */
-  color: white; /* Text color */
-  border-radius: 25px; /* Adjust to control the roundness */
-  cursor: pointer; /* Change cursor on hover */
-  transition: background-color 0.3s ease; /* Optional: Smooth background color change on hover */
-  visibility: hidden;
- }
- 
 .pill-option:hover {
-  background-color: gold; /* Optional: Change background color on hover */
+  background-color: gold;
 }
 
 .pill-option.selected {
-  background-color: red; /* Change background color of the selected option */
+  background-color: red; 
 }
 
 .pill-option.scrolled {
@@ -75,14 +80,6 @@ body {
 .bi {
   vertical-align: -.125em;
   fill: currentColor;
-}
-
-.bd-mode-toggle {
-  z-index: 1500;
-}
-
-.bd-mode-toggle .dropdown-menu .active .bi {
-  display: block !important;
 }
 
 .carousel {

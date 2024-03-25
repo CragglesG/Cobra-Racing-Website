@@ -1,6 +1,3 @@
-html {
-}
-
 .theme-switcher .dropdown-item:active {
   --bs-dropdown-link-active-bg: var(--bs-success-bg-subtle);
   color: var(--bs-dropdown-link-color);
