@@ -7,27 +7,55 @@
   }
 }
 
-#nav.scrolled {
-  border-radius: 3rem;
-  width: 75%;
-  top: 1rem;
-  margin-left: calc(50% - 37.5vw);
-}
-
-[data-bs-theme=dark] {
-  #nav.scrolled {
-    background-color: darkred;
+@media (max-width: 268px) {
+  h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 }
 
-#nav {
-  will-change: margin;
-  border-radius: 0;
-  top: 0;
-  width: 100%;
-  transition: top 0.5s ease, border-radius 0.5s ease, margin-left 0.5s ease;
-  margin-left: calc(50% - 49.45vw);
-  background-color: #212529;
+@media (min-width: 807px) {
+  .pill-option.scrolled {
+    visibility: visible;
+    content-visibility: visible;
+    display: initial;
+  }
+
+  #nav.scrolled {
+    border-radius: 3rem;
+    width: 75%;
+    top: 1rem;
+    margin-left: calc(50% - 37.5vw);
+  }
+
+  #nav {
+    will-change: margin;
+    border-radius: 0;
+    top: 0;
+    width: 100%;
+    transition: top 0.5s ease, border-radius 0.5s ease, margin-left 0.5s ease;
+    margin-left: calc(50% - 49.45vw);
+    background-color: var(--bs-dark);
+  }
+
+  [data-bs-theme=dark] {
+    #nav.scrolled {
+      background-color: darkred;
+    }
+  }
+}
+
+.dark-text {
+  color: var(--bs-dark);
+}
+
+@media (max-width: 807px) {
+  #nav {
+    border-radius: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--bs-dark);
+  }
 }
 
 .pill-selector {
@@ -44,6 +72,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease; 
   visibility: hidden;
+  content-visibility: hidden;
+  display: none;
 }
  
 .pill-option:hover {
@@ -52,10 +82,6 @@
 
 .pill-option.selected {
   background-color: red; 
-}
-
-.pill-option.scrolled {
-  visibility: visible;
 }
  
 
@@ -80,10 +106,5 @@ body {
 .bi {
   vertical-align: -.125em;
   fill: currentColor;
-}
-
-.carousel {
-  height: auto;
-  background-color: var(--bs-dark);
 }
 

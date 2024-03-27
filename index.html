@@ -105,6 +105,7 @@
                     })
             });
         })();
+
         window.addEventListener('scroll', function() {
             var nav = document.getElementById('nav');
             var pill1 = document.getElementById('pill-option1');
@@ -158,7 +159,7 @@
             var pill2 = document.getElementById('pill-option2');
             var pill3 = document.getElementById('pill-option3');
             var ourProposalElement = document.querySelector('#our-proposal');
-            if (ourProposalElement.getBoundingClientRect().top <= 50) {
+            if (ourProposalElement.getBoundingClientRect().top <= 5) {
                 pill1.classList.remove('selected');
                 pill2.classList.remove('selected');
                 pill3.classList.add('selected');
@@ -168,11 +169,6 @@
     <link rel="icon" type="image/svg+xml" sizes="1750x850" href="assets/img/LogoCropped.webp">
     <link rel="icon" type="image/svg+xml" sizes="1750x850" href="assets/img/LogoCropped.webp" media="(prefers-color-scheme: dark)">>
 
-    <link rel="preload" as="style" href="assets/css/bootstrap.min.css">
-    <link rel="preload" as="style" href="assets/css/carousel.css">
-    <link rel="preload" as="style" href="assets/css/theme-switcher.css">
-    <link rel="preload" as="style" href="assets/css/website.css">
-
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/css/theme-switcher.css">
@@ -180,8 +176,9 @@
 </head>
 <body>
     <header>
-        <nav id="nav" class="navbar navbar-expand-md fixed-top nav-pills shadow-lg">
-            <div class="container-fluid"><a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" alt="Cobra Racing Logo" src="assets/img/LogoCropped.webp" width="112" height="45"></a>
+        <nav id="nav" class="navbar navbar-expand-md fixed-top nav-pills shadow-lg justify-content-center">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="d-inline-block align-text-top" alt="Cobra Racing Logo" src="assets/img/LogoCropped.webp" width="112" height="45"></a>
                 <div class="pill-selector nav-item">
                     <div id="pill-option1" class="pill-option nav-link rounded-5" onclick="window.location.href='#our-team', pillclick()">Our Team</div>
                     <div id="pill-option2" class="pill-option nav-link rounded-5" onclick="window.location.href='#our-sponsors', pillclick()">Our Sponsors</div>
@@ -258,23 +255,23 @@
             <hr class="featurette-divider">
             <div class="row">
                 <div class="col-lg-4" style="background-color: #cd7f32;"><img loading="lazy" class="img-fluid" src="assets/img/toyotalogo.webp" alt="Toyota Logo" width="131" height="131">
-                    <h2 class="fw-normal">Toyota Naas (Bronze Sponsor)</h2>
-                    <p>Toyota Naas are Cobra Racing's Bronze sponsor. They have provided us with a sponsorship that will help us to progress faster and further in this competition. We are very grateful for their support.</p>
+                    <h2 class="fw-normal dark-text">Toyota Naas (Bronze Sponsor)</h2>
+                    <p class="dark-text">Toyota Naas are Cobra Racing's Bronze sponsor. They have provided us with a sponsorship that will help us to progress faster and further in this competition. We are very grateful for their support.</p>
                     <p><img loading="lazy" class="img-fluid" src="assets/img/Bronze%20Sponsor%20Icon.webp" alt="Bronze Sponsor Medal" width="131" height="131"><a class="btn btn-secondary" role="button" href="https://www.toyotanaas.ie/">Go to site »</a></p>
                 </div>
                 <div class="col-lg-4" style="background-color: goldenrod;"><img loading="lazy" class="img-fluid" src="assets/img/Honda%20Logo.webp" alt="Honda Ireland Logo" style="margin-bottom: 1.25rem;margin-top: 1.25rem;">
-                    <h2 class="fw-normal">Honda Ireland (GOLD Sponsor)</h2>
-                    <p>Honda Ireland is Cobra Racing's Gold sponsor. They have provided us with an extremely generous sponsorship and are key to our success. We are so thankful for their support and we hope that it will help to bring us even further in this competition.</p>
+                    <h2 class="fw-normal dark-text">Honda Ireland (GOLD Sponsor)</h2>
+                    <p class="dark-text">Honda Ireland is Cobra Racing's Gold sponsor. They have provided us with an extremely generous sponsorship and are key to our success. We are so thankful for their support and we hope that it will help to bring us even further in this competition.</p>
                     <p><img loading="lazy" class="img-fluid" src="assets/img/Gold%20Sponsor%20Icon.webp" alt="Gold Sponsor Medal" width="131" height="131"><a class="btn btn-secondary" role="button" href="https://www.honda.ie/">Go to site »</a></p>
                 </div>
                 <div class="col-lg-4" style="background-color: silver;"><img loading="lazy" class="img-fluid" src="assets/img/Allegro%20Ireland%20Logo.webp" alt="Allegro Ireland Logo" style="margin-top: 0.5rem;margin-bottom: 0.5rem;">
-                    <h2 class="fw-normal">Allegro Ireland (Silver Sponsor)</h2>
-                    <p>Allegro Ireland are Cobra Racing's Silver sponsor. Their generous sponsorship will provide provide us with the funds required for many aspects of this competition. We are very grateful for their sponsorship and support for Cobra Racing.</p>
+                    <h2 class="fw-normal dark-text">Allegro Ireland (Silver Sponsor)</h2>
+                    <p class="dark-text">Allegro Ireland are Cobra Racing's Silver sponsor. Their generous sponsorship will provide provide us with the funds required for many aspects of this competition. We are very grateful for their sponsorship and support for Cobra Racing.</p>
                     <p><img loading="lazy" class="img-fluid" src="assets/img/Silver%20Sponsor%20Icon.webp" alt="Silver Sponsor Medal" width="131" height="131"><a class="btn btn-secondary" role="button" href="https://allegro.ie">Go to site »</a></p>
                 </div>
             </div>
             <hr class="featurette-divider" id="our-proposal">
-            <div id="our-proposal" class="row featurette">
+            <div class="row featurette">
                 <div class="col-md-7">
                     <h2 class="fw-normal featurette-heading lh-1">Our Plan and Proposal.<span class="text-body-secondary">&nbsp;What we've done so far and what we're doing now.</span></h2>
                     <p class="lead">At Cobra Racing, we've been working hard to make our ideas a reality since our team was created. We have secured sponsorships with Honda Ireland, Allegro Ireland, and Toyota Naas. We are currently in the process of designing prototypes of our car, and we have been accepted in to the Irish national finals, following our&nbsp;proposal submission to F1 in Schools. You can view it&nbsp;<a href="https://docs.google.com/presentation/d/1lM2mpracykM-SHPQQD-wCYrWk5MqTiu38IzrshycWPk/edit?usp=sharing">here.</a>&nbsp;</p>
@@ -291,7 +288,7 @@
     </main>
     <!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
     <script type="module" src="assets/js/bootstrap-import.js"></script>
-    <script src="assets/js/color-modes.js"></script>
+    <script async src="assets/js/color-modes.js"></script>
     <script src="assets/js/theme-switcher.js"></script>
 </body>
 
