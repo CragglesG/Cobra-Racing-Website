@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "lozad": "^1.16.0",
     "purgecss": "^5.0.0"
   }
 }

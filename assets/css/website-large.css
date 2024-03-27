@@ -1,0 +1,36 @@
+@media (min-width: 807px) {
+    .pill-option.scrolled {
+      visibility: visible;
+      content-visibility: visible;
+      display: initial;
+    }
+  
+    #nav.scrolled {
+      border-radius: 3rem;
+      width: 75%;
+      top: 1rem;
+      margin-left: calc(50% - 37.5vw);
+    }
+  
+    #nav {
+      will-change: margin;
+      border-radius: 0;
+      top: 0;
+      width: 100%;
+      transition: top 0.5s ease, border-radius 0.5s ease, margin-left 0.5s ease;
+      margin-left: calc(50% - 49.45vw);
+      background-color: var(--bs-dark);
+    }
+  
+    [data-bs-theme=dark] {
+      #nav.scrolled {
+        background-color: darkred;
+      }
+    }
+}
+
+@media (min-width: 807px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}

@@ -1,0 +1,72 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0.05;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.dark-text {
+    color: var(--bs-dark);
+}
+
+.pill-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+  
+.pill-option {
+    padding: 0.7rem 1.4rem; 
+    background-color: goldenrod; 
+    color: white; 
+    border-radius: 5rem; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    visibility: hidden;
+    content-visibility: hidden;
+    display: none;
+}
+   
+.pill-option:hover {
+    background-color: gold;
+}
+  
+.pill-option.selected {
+    background-color: red; 
+}
+   
+  
+body {
+    animation: 1.2s ease-out 0s 1 fadeIn;
+}
+  
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+@media (max-width: 268px) {
+    h1 {
+      max-width: 100%;
+      overflow-wrap: break-word;
+    }
+}
+  
+@media (max-width: 807px) {
+    #nav {
+      border-radius: 0;
+      top: 0;
+      width: 100%;
+      background-color: var(--bs-dark);
+    }
+}
