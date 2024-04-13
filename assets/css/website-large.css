@@ -18,7 +18,7 @@
       top: 0;
       width: 100%;
       transition: top 0.5s ease, border-radius 0.5s ease, margin-left 0.5s ease;
-      margin-left: calc(50% - 49.45vw);
+      margin-left: calc(50% - 50vw);
       background-color: var(--bs-dark);
     }
   
