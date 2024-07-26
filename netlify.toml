@@ -3,6 +3,7 @@
     to = "https://cobraracingf1inschools.wordpress.com"
     status = 200
 
+[[redirects]]
     from = "/contact"
     to = "https://cobraracingf1inschools.wordpress.com/about"
     status = 200
