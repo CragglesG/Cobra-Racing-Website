@@ -2,8 +2,10 @@
 from = "/blog"
 to = "https://cobraracingf1inschools.wordpress.com"
 status = 200
+force = true
 
 [[redirects]]
 from = "/contact"
 to = "https://cobraracingf1inschools.wordpress.com/about"
 status = 200
+force = true
