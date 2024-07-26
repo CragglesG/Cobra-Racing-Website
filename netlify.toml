@@ -5,7 +5,7 @@ status = 200
 force = true
 
 [[redirects]]
-from = "/contact"
+from = "/contact/:splat"
 to = "https://cobraracingf1inschools.wordpress.com/about"
 status = 200
 force = true
