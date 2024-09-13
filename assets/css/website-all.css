@@ -1,45 +1,5 @@
-@keyframes fadeIn {
-    0% {
-      opacity: 0.05;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-
 .dark-text {
     color: var(--bs-dark);
-}
-
-.pill-selector {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-  
-.pill-option {
-    padding: 0.7rem 1.4rem; 
-    background-color: goldenrod; 
-    color: white; 
-    border-radius: 5rem; 
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-    visibility: hidden;
-    content-visibility: hidden;
-    display: none;
-}
-   
-.pill-option:hover {
-    background-color: gold;
-}
-  
-.pill-option.selected {
-    background-color: red; 
-}
-   
-  
-body {
-    animation: 1.2s ease-out 0s 1 fadeIn;
 }
   
 .bd-placeholder-img {
@@ -61,12 +21,25 @@ body {
       overflow-wrap: break-word;
     }
 }
+
+#nav {
+    border-radius: 4rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--bs-border-color);
+    width: 75%;
+    top: 1rem;
+    margin-left: calc(50% - 37.5vw);
+    backdrop-filter: blur(20px);
+}
+
+.nav-link {
+  margin-left: 3rem;
+}
   
-@media (max-width: 807px) {
-    #nav {
-      border-radius: 0;
-      top: 0;
-      width: 100%;
-      background-color: var(--bs-dark);
-    }
+  
+@media (min-width: 807px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
 }

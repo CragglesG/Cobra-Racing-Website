@@ -30,66 +30,6 @@
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
 
     <script>
-        window.addEventListener('scroll', function() {
-            var nav = document.getElementById('nav');
-            var pill1 = document.getElementById('pill-option1');
-            var pill2 = document.getElementById('pill-option2');
-            var pill3 = document.getElementById('pill-option3');
-            if (window.pageYOffset > 350) {
-                nav.classList.add('scrolled');
-                pill1.classList.add('scrolled');
-                pill2.classList.add('scrolled');
-                pill3.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-                pill1.classList.remove('scrolled');
-                pill2.classList.remove('scrolled');
-                pill3.classList.remove('scrolled');
-            }
-        });
-        function pillclick() {
-            var pill1 = document.getElementById('pill-option1');
-            var pill2 = document.getElementById('pill-option2');
-            var pill3 = document.getElementById('pill-option3');
-            pill1.classList.remove('selected');
-            pill2.classList.remove('selected');
-            pill3.classList.remove('selected');
-            event.target.classList.add('selected');
-        }
-        window.addEventListener('scroll', function() {
-            var pill1 = document.getElementById('pill-option1');
-            var pill2 = document.getElementById('pill-option2');
-            var pill3 = document.getElementById('pill-option3');
-            var ourTeamElement = document.querySelector('#our-team');
-            if (ourTeamElement.getBoundingClientRect().top <= 5) {
-                pill1.classList.add('selected');
-                pill2.classList.remove('selected');
-                pill3.classList.remove('selected');
-            }
-        });
-        window.addEventListener('scroll', function() {
-            var pill1 = document.getElementById('pill-option1');
-            var pill2 = document.getElementById('pill-option2');
-            var pill3 = document.getElementById('pill-option3');
-            var ourSponsorsElement = document.querySelector('#our-sponsors');
-            if (ourSponsorsElement.getBoundingClientRect().top <= 5) {
-                pill1.classList.remove('selected');
-                pill2.classList.add('selected');
-                pill3.classList.remove('selected');
-            }
-        });
-        window.addEventListener('scroll', function() {
-            var pill1 = document.getElementById('pill-option1');
-            var pill2 = document.getElementById('pill-option2');
-            var pill3 = document.getElementById('pill-option3');
-            var OurCarElement = document.querySelector('#our-car');
-            if (OurCarElement.getBoundingClientRect().top <= 200) {
-                pill1.classList.remove('selected');
-                pill2.classList.remove('selected');
-                pill3.classList.add('selected');
-            }
-        });
-
         const lenis = new Lenis()
 
         lenis.on('scroll', (e) => {
@@ -160,35 +100,30 @@
 
     <link rel="preload" as="style" href="assets/css/bootstrap.min.css">
     <link rel="preload" as="style" href="assets/css/carousel.css">
-    <link rel="preload" as="style" href="assets/css/theme-switcher.css">
     <link rel="preload" as="style" href="assets/css/website-all.css">
-    <link rel="preload" as="style" href="assets/css/website-large.css" media="(min-width: 807px)">
     <link rel="preload" as="image" href="assets/img/cobra-racing-horizontal-no-bg.webp">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/within.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/carousel.css">
-    <link rel="stylesheet" href="assets/css/theme-switcher.css">
     <link rel="stylesheet" href="assets/css/website-all.css">
-    <link rel="stylesheet" href="assets/css/website-large.css" media="(min-width: 807px)">
 </head>
 <body>
     <header>
-        <nav id="nav" class="navbar navbar-expand-md fixed-top nav-pills shadow-lg justify-content-center">
+        <nav id="nav" class="navbar navbar-expand-md fixed-top shadow-lg align-content-end">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img class="d-inline-block align-text-top" alt="Cobra Racing Logo" src="assets/img/LogoCropped.webp" width="100" height="45"></a>
-                <div class="pill-selector nav-item">
-                    <div id="pill-option1" class="pill-option nav-link rounded-5" onclick="window.location.href='#our-team', pillclick()">Our Team</div>
-                    <div id="pill-option2" class="pill-option nav-link rounded-5" onclick="window.location.href='#our-sponsors', pillclick()">Our Sponsors</div>
-                    <div id="pill-option3" class="pill-option nav-link rounded-5" onclick="window.location.href='#our-car',  pillclick()">Our Car</div>
+                <div class="navbar-brand" onclick="lenis.scrollTo('top')"><img class="d-inline-block align-text-top" alt="Cobra Racing Logo" src="assets/img/LogoCropped.webp" width="100" height="45" style="margin-left:2px;"></div>
+                <div class="nav-item d-flex flex-row flex-nowrap justify-content-r collapse">
+                    <div class="nav-link rounded-5 flex-grow-1" onclick="lenis.scrollTo('#our-team')">Our Team</div>
+                    <div class="nav-link rounded-5 flex-grow-1" onclick="lenis.scrollTo('#our-sponsors')">Our Sponsors</div>
+                    <div class="nav-link rounded-5 flex-grow-1" onclick="lenis.scrollTo('#our-car')">Our Car</div>
                 </div>
                 <button
                     class="theme-toggle"
                     type="button"
                     title="Toggle theme"
                     aria-label="Toggle theme"
-                    data-bs-theme = "light"
-                    style="color:white;"
+                    style="border-left-width: 1px; border-left-style: solid; border-left-color: var(--bs-border-color);"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -222,11 +157,12 @@
         <meta itemprop="name" content="Cobra Racing"/>
 		<br><br><br><br>
         <h1 class="h1 text-center" style="margin-top: 2rem;font-size: 40pt;">Welcome to&nbsp;<img class="img-fluid" src="assets/img/cobra-racing-horizontal-no-bg.webp" alt="Cobra Racing Logo" style="width: 30rem;" itemprop="logo"></h1>
-        <p class="text-center" itemprop="slogan"><i>Looking for our blog? You can find that <a href="/blog" itemprop="url" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px dotted;">here.</a></i></p>
-		<br><br><br><br>
-		<hr>
+        <p class="text-center"><i>Looking for our blog? You can find that <a href="/blog" itemprop="url" target="_blank" style="color: inherit; text-decoration: none; border-bottom: 1px dotted;">here.</a></i></p>
+		<br><br id="our-team"><br><br>
+        <hr>
+        <br>
 		<div class="container marketing">
-            <h1 id="our-team" class="text-center">Our Team</h1><br>
+            <h1 class="text-center">Our Team</h1><br>
             <div class="row">
                 <div class="col-lg-4" itemprop="member"><img loading="lazy" class="rounded-circle image" alt="Picture of Daniel" src="assets/img/IMG_0907.webp" width="140" height="140">
                     <h2 class="fw-normal">Daniel: Team Principal</h2>
