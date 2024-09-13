@@ -36,7 +36,12 @@
 .nav-link {
   margin-left: 3rem;
 }
-  
+
+@media (max-width: 806px) {
+  .nav-link {
+    visibility: hidden;
+  }
+}
   
 @media (min-width: 807px) {
   .bd-placeholder-img-lg {
