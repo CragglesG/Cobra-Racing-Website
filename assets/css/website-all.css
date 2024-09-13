@@ -15,13 +15,6 @@
     fill: currentColor;
 }
 
-@media (max-width: 268px) {
-    h1 {
-      max-width: 100%;
-      overflow-wrap: break-word;
-    }
-}
-
 #nav {
     border-radius: 4rem;
     border-width: 1px;
@@ -31,15 +24,44 @@
     top: 1rem;
     margin-left: calc(50% - 37.5vw);
     backdrop-filter: blur(20px);
+    --webkit-filter: blur(20px);
+}
+
+.navbar-brand {
+  margin-right: 0px;
 }
 
 .nav-link {
   margin-left: 3rem;
 }
 
-@media (max-width: 806px) {
+@media (max-width: 268px) {
+  h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width:515px) {
   .nav-link {
-    visibility: hidden;
+    display: none;
+  }
+}
+
+@media (max-width:624px) {
+  .nav-link {
+    margin-left: 1.5rem;
+  }
+
+  #logo {
+    width: 75px;
+  }
+}
+
+@media (max-width: 806px) {
+  #nav {
+    width: 90%!important;
+    margin-left: calc(50% - 45vw)!important;
   }
 }
   
