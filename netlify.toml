@@ -1,11 +1,9 @@
 [[redirects]]
 from = "/blog"
-to = "https://cobraracingf1inschools.wordpress.com"
-status = 200
-force = true
+to = "https://blog.cobraracing.ie"
 
 [[redirects]]
 from = "/contact"
-to = "https://cobraracingf1inschools.wordpress.com/about/"
+to = "https://blog.cobraracing.ie/about/"
 status = 200
 force = true
