@@ -3,7 +3,7 @@
 .dark-text {
     color: var(--bs-dark);
 }
-  
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -70,7 +70,7 @@ p, h1, h2, h3, h4 {
     margin-left: calc(50% - 45vw)!important;
   }
 }
-  
+
 @media (min-width: 807px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
