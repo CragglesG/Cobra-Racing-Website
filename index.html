@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Cobra Racing - F1 in Schools Team">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="--bs-body-bg">
+    <meta name="theme-color" content="#ffffff">
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -44,6 +44,8 @@
         }
 
         requestAnimationFrame(raf)
+
+	const metaTheme = document.querySelector('meta[name="theme-color"]').setAttribute;
         
         window.onload = function setupTheme() {
             const storedTheme = localStorage.getItem("theme");
@@ -60,19 +62,19 @@
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.documentElement.setAttribute('data-bs-theme', 'dark');
                     toggle.classList.add("theme-toggle--toggled");
-		    document.body.style.backgroundColor = "#000000";
+		    metaTag.setAttribute("content", "#000000");
                 } else {
                     document.documentElement.setAttribute('data-bs-theme', 'light');
-	            document.body.style.backgroundColor = "#ffffff";
+		    metaTag.setAttribute("content", "#ffffff");
                 }
             } else {
                 if (pageTheme == 'dark') {
                     document.documentElement.setAttribute('data-bs-theme', 'dark');
                     toggle.classList.add("theme-toggle--toggled");
-		    document.body.style.backgroundColor = "#000000";
+		    metaTag.setAttribute("content", "#000000");
                 } else {
                     document.documentElement.setAttribute('data-bs-theme', 'light');
-		    document.body.style.backgroundColor = "#ffffff";
+		    metaTag.setAttribute("content", "#ffffff");
                 }
             }
 
@@ -92,11 +94,11 @@
             if (pageTheme == "dark") {
                 document.documentElement.setAttribute('data-bs-theme', 'light');
                 toggle.classList.remove('theme-toggle--toggled');
-		document.body.style.backgroundColor = "#000000";
+	        metaTag.setAttribute("content", "#000000");
             } else if (pageTheme == "light") {
                 document.documentElement.setAttribute('data-bs-theme', 'dark');
                 toggle.classList.add('theme-toggle--toggled');
-		document.body.style.backgroundColor = "#ffffff";
+		metaTag.setAttribute("content", "#ffffff");
             } else {
                 console.warn("data-bs-theme does not match 'light' or 'dark', not changing")
             }
