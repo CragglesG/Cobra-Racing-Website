@@ -60,15 +60,19 @@
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.documentElement.setAttribute('data-bs-theme', 'dark');
                     toggle.classList.add("theme-toggle--toggled");
+		    document.body.style.backgroundColor = "#000000";
                 } else {
                     document.documentElement.setAttribute('data-bs-theme', 'light');
+	            document.body.style.backgroundColor = "#ffffff";
                 }
             } else {
                 if (pageTheme == 'dark') {
                     document.documentElement.setAttribute('data-bs-theme', 'dark');
                     toggle.classList.add("theme-toggle--toggled");
+		    document.body.style.backgroundColor = "#000000";
                 } else {
                     document.documentElement.setAttribute('data-bs-theme', 'light');
+		    document.body.style.backgroundColor = "#ffffff";
                 }
             }
 
@@ -88,9 +92,11 @@
             if (pageTheme == "dark") {
                 document.documentElement.setAttribute('data-bs-theme', 'light');
                 toggle.classList.remove('theme-toggle--toggled');
+		document.body.style.backgroundColor = "#000000";
             } else if (pageTheme == "light") {
                 document.documentElement.setAttribute('data-bs-theme', 'dark');
                 toggle.classList.add('theme-toggle--toggled');
+		document.body.style.backgroundColor = "#ffffff";
             } else {
                 console.warn("data-bs-theme does not match 'light' or 'dark', not changing")
             }
