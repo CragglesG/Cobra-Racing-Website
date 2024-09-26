@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="Cobra Racing - F1 in Schools Team">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#000000">
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -62,19 +62,19 @@
                 if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
                     document.documentElement.setAttribute('data-bs-theme', 'dark');
                     toggle.classList.add("theme-toggle--toggled");
-		    metaTag.setAttribute("content", "#000000");
+		    metaTag.setAttribute("content", "#ffffff");
                 } else {
                     document.documentElement.setAttribute('data-bs-theme', 'light');
-		    metaTag.setAttribute("content", "#ffffff");
+		    metaTag.setAttribute("content", "#000000");
                 }
             } else {
                 if (pageTheme == 'dark') {
                     document.documentElement.setAttribute('data-bs-theme', 'dark');
                     toggle.classList.add("theme-toggle--toggled");
-		    metaTag.setAttribute("content", "#000000");
+		    metaTag.setAttribute("content", "#ffffff");
                 } else {
                     document.documentElement.setAttribute('data-bs-theme', 'light');
-		    metaTag.setAttribute("content", "#ffffff");
+		    metaTag.setAttribute("content", "#000000");
                 }
             }
 
@@ -94,11 +94,11 @@
             if (pageTheme == "dark") {
                 document.documentElement.setAttribute('data-bs-theme', 'light');
                 toggle.classList.remove('theme-toggle--toggled');
-	        metaTag.setAttribute("content", "#000000");
+	        metaTag.setAttribute("content", "#ffffff");
             } else if (pageTheme == "light") {
                 document.documentElement.setAttribute('data-bs-theme', 'dark');
                 toggle.classList.add('theme-toggle--toggled');
-		metaTag.setAttribute("content", "#ffffff");
+		metaTag.setAttribute("content", "#000000");
             } else {
                 console.warn("data-bs-theme does not match 'light' or 'dark', not changing")
             }
