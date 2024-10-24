@@ -48,12 +48,6 @@ p, h1, h2, h3, h4 {
   }
 }
 
-@media (max-width:515px) {
-  .nav-link {
-    display: none;
-  }
-}
-
 @media (max-width:624px) {
   .nav-link {
     margin-left: 1.5rem;
