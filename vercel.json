@@ -6,8 +6,8 @@
     }
   ], "redirects": [
     {
-      "source": "/blog",
-      "destination": "https://blog.cobraracing.ie",
+      "source": "/blog/*",
+      "destination": "https://blog.cobraracing.ie/*",
       "permanent": true
     }
   ]
