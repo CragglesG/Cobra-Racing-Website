@@ -2,7 +2,8 @@
   "rewrites": [
     {
       "source": "/contact",
-      "destination": "https://blog.cobraracing.ie/about"
+      "destination": "https://blog.cobraracing.ie/about",
+      "permanent": true
     }
   ], "redirects": [
     {
