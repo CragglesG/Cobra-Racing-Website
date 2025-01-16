@@ -1,9 +1,0 @@
-[[redirects]]
-from = "/blog"
-to = "https://blog.cobraracing.ie"
-
-[[redirects]]
-from = "/contact"
-to = "https://blog.cobraracing.ie/about/"
-status = 200
-force = true
