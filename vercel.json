@@ -3,6 +3,10 @@
     {
       "source": "/contact",
       "destination": "https://blog.cobraracing.ie/about"
+    },
+    {
+      "source": "/contact/",
+      "destination": "https://blog.cobraracing.ie/about/"
     }
   ], "redirects": [
     {
