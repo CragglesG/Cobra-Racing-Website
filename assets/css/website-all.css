@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jura:wght@300..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 
 .dark-text {
-    color: var(--bs-dark);
+  color: var(--bs-dark);
 }
 
 .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
+  vertical-align: -0.125em;
+  fill: currentColor;
 }
 
 #nav {
-    border-radius: 4rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--bs-border-color);
-    width: 75%;
-    top: 1rem;
-    margin-left: calc(50% - 37.5vw);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+  border-radius: 4rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--bs-border-color);
+  width: 75%;
+  top: 1rem;
+  margin-left: calc(50% - 37.5vw);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .navbar-brand {
@@ -37,12 +37,18 @@
   margin-left: 3rem;
 }
 
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
   font-family: "Titillium Web", sans-serif;
 }
 
 a {
-  color: inherit; text-decoration: none; border-bottom: 1px dotted;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted;
 }
 
 @media (max-width: 268px) {
@@ -52,13 +58,13 @@ a {
   }
 }
 
-@media (max-width:515px) {
+@media (max-width: 515px) {
   .nav-link {
     display: none;
   }
 }
 
-@media (max-width:624px) {
+@media (max-width: 624px) {
   .nav-link {
     margin-left: 1.5rem;
   }
@@ -70,8 +76,8 @@ a {
 
 @media (max-width: 806px) {
   #nav {
-    width: 90%!important;
-    margin-left: calc(50% - 45vw)!important;
+    width: 90% !important;
+    margin-left: calc(50% - 45vw) !important;
   }
 }
 
@@ -79,4 +85,33 @@ a {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}
+
+#opel-logo {
+  width: 7rem;
+  height: auto;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+#mondello-logo {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+#jacobus-logo {
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+#alphadrives-logo {
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.sponsor-row {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
 }
