@@ -95,6 +95,8 @@ a {
 }
 
 #mondello-logo {
+  width: 18rem;
+  height: auto;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
